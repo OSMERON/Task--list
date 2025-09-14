@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1F2937" />
+    <title>Task list 2025</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <label class="theme-switch">
+      <input type="checkbox" id="mode-toggle" />
+      <span class="slider" aria-hidden="true"></span>
+      <span class="label" id="mode-label">Light theme</span>
+    </label>
+
+    <header>
+      <h1>Task list 2025</h1>
+
+      <form id="new-task-form">
+        <input
+          type="text"
+          id="new-task-input"
+          placeholder="What is your task?"
+          aria-label="Task"
+        />
+        <select id="task-category" aria-label="Category"></select>
+        <input type="submit" id="new-task-submit" value="Add new task" />
+      </form>
+
+      <div class="group-title">Add as</div>
+      <div id="quick-pick"></div>
+
+      <div class="group-title">Show only</div>
+      <div id="filters"></div>
+
+      <div id="category-manager">
+        <input
+          type="text"
+          id="new-category-input"
+          placeholder="New category name"
+          aria-label="New category name"
+        />
+        <input
+          type="color"
+          id="new-category-color"
+          value="#3b82f6"
+          aria-label="New category color"
+        />
+        <button id="add-category-btn" type="button">Add Category</button>
+      </div>
+
+      <div id="category-list"></div>
+    </header>
+
+    <main>
+      <section class="task-list">
+        <h2 class="section-title">Tasks</h2>
+        <div id="tasks"></div>
+      </section>
+
+      <section class="calendar-section">
+        <div class="calendar-header">
+          <button id="prev-month" type="button" aria-label="Previous month">
+            ◀
+          </button>
+          <div id="calendar-title" aria-live="polite"></div>
+          <button id="next-month" type="button" aria-label="Next month">
+            ▶
+          </button>
+        </div>
+        <div class="calendar-legend" id="calendar-legend"></div>
+        <div id="calendar-grid" class="calendar-grid"></div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
